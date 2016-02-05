@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GWR-25-0f9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="xhg-5w-sHr">
+            <objects>
+                <navigationController id="GWR-25-0f9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2B-AL-HkL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VcT-It-nAa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVR-wb-rcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-542" y="1005"/>
+        </scene>
+        <!--Navigation Bar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalizationExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An example of label localization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjY-Mk-YwT">
+                                <rect key="frame" x="180" y="72" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSF-or-3gs">
+                                <rect key="frame" x="186" y="221" width="228" height="30"/>
+                                <state key="normal" title="An example of button localization"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vCM-Ff-Ia0">
+                                <rect key="frame" x="182" y="391" width="237" height="29"/>
+                                <segments>
+                                    <segment title="First Segment"/>
+                                    <segment title="Second Segment"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder Localization " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KV-rl-Ilr">
+                                <rect key="frame" x="180" y="550" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4KV-rl-Ilr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Evb-FV-fbd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QjY-Mk-YwT" secondAttribute="bottom" constant="507" id="SOq-fV-81M"/>
+                            <constraint firstItem="NSF-or-3gs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="157" id="Sq5-SR-fl0"/>
+                            <constraint firstItem="NSF-or-3gs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wmf-Gw-zwC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NSF-or-3gs" secondAttribute="bottom" constant="349" id="YhR-3O-dKu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vCM-Ff-Ia0" secondAttribute="bottom" constant="181" id="ZDP-V8-CRT"/>
+                            <constraint firstItem="QjY-Mk-YwT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="dKo-9p-w4E"/>
+                            <constraint firstItem="vCM-Ff-Ia0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fbG-6W-aTH"/>
+                            <constraint firstItem="QjY-Mk-YwT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ip1-rd-Csy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4KV-rl-Ilr" secondAttribute="bottom" constant="20" id="z3v-5d-t39"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Navigation Bar" id="M3t-2s-tcF">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="nzv-7R-mF4"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="198" y="1005"/>
         </scene>
     </scenes>
 </document>

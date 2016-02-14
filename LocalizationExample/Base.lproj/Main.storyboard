@@ -49,6 +49,9 @@
                                     <segment title="First Segment"/>
                                     <segment title="Second Segment"/>
                                 </segments>
+                                <connections>
+                                    <action selector="SegmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="hMV-rr-W4S"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder Localization " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KV-rl-Ilr">
                                 <rect key="frame" x="180" y="550" width="240" height="30"/>
@@ -73,6 +76,13 @@
                     <navigationItem key="navigationItem" title="Navigation Bar" id="M3t-2s-tcF">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="nzv-7R-mF4"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="Button" destination="NSF-or-3gs" id="DuH-IX-tgW"/>
+                        <outlet property="Label" destination="QjY-Mk-YwT" id="vFI-eq-mR8"/>
+                        <outlet property="Segment" destination="vCM-Ff-Ia0" id="Oye-oD-4Ew"/>
+                        <outlet property="SegmentAction" destination="vCM-Ff-Ia0" id="fcK-rN-URo"/>
+                        <outlet property="TextField" destination="4KV-rl-Ilr" id="tYA-EX-6jt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
